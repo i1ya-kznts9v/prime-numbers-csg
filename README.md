@@ -7,7 +7,7 @@
 #### To generate context-sensitive grammar use command from this holder:
 
 ```
-python ./src/csg_generator.py
+python ./project/csg_generator.py
 ```
 
 #### The following default arguments will be used here:
@@ -35,28 +35,34 @@ optional arguments:
 #### To check if number is prime or not in prime number context-sensitive grammar use command from this holder:
 
 ```
-python ./src/prime_checker.py [N]
+python ./project/prime_checker.py [N]
 N is a number to check
 ```
 
 #### Samples
 
 ```
-python ./src/prime_checker.py 31
+python ./project/prime_checker.py 31
 31 is a prime number
 ```
 
 OR
 
 ```
-python ./src/prime_checker.py 128
+python ./project/prime_checker.py 128
 128 is not a prime number
 ```
 
 #### You can also specify path to prime number context-sensitive grammar:
 
 ```
-python prime_generator.py [GRAMMAR_PATH] [NUMBER]
+usage: prime_generator.py [GRAMMAR_PATH] [NUMBER]
+
+required arguments:
+  NUMBER               number to check
+
+optional arguments:
+  GRAMMAR_PATH         path to grammar file
 ```
 
 As shown above, the default argument is:
