@@ -1,4 +1,4 @@
-# Prime numbers grammar generator and checker
+# Prime numbers grammar CSG generator and checker
 
 ## This program use LBA to make prime number context-sensitive grammar and check it
 
