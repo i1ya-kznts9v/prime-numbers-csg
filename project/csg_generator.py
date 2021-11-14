@@ -134,8 +134,8 @@ def csg_from_lba(path, save_path):
                 rules.append((["[#, " + x + ", " + a + "]", b],
                               [a, b]))
 
-    buffer_file = "./data/tmp_csg.txt"
-    tmp = open(buffer_file, "w")
+    tmp_file = "./data/tmp_csg.txt"
+    tmp = open(tmp_file, "w")
 
     tmp.write(line_list[2] + "\n")  # sigma
     for a, b in rules:
@@ -157,7 +157,7 @@ def csg_from_lba(path, save_path):
             pair4.append(tuple(pair3))
         return pair4
 
-    line_list = [line.rstrip('\n') for line in open(buffer_file, "r")]
+    line_list = [line.rstrip('\n') for line in open(tmp_file, "r")]
 
     # sigma = line_list[0].replace("sigma: {", "").replace(
     #     "}", "").replace(" ", "").split(",")
@@ -233,14 +233,14 @@ def csg_from_lba(path, save_path):
         #         print(i, end = "")
         #     print()
     out = open(save_path, "w")
-    line_list = [line.rstrip('\n') for line in open(buffer_file, "r")]
+    line_list = [line.rstrip('\n') for line in open(tmp_file, "r")]
     out.write(line_list[0] + "\n")
     for ix, rule in enumerate(line_list):
         if ix - 1 in active_rules:
             out.write(rule + "\n")
 
     out.close()
-    os.remove(buffer_file)
+    os.remove(tmp_file)
 
 
 def main():
