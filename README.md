@@ -50,7 +50,7 @@ OR
 
 ```
 python ./project/prime_checker.py 128
-128 is not a prime number
+18 is not a prime number
 ```
 
 #### You can also specify path to prime number context-sensitive grammar:
