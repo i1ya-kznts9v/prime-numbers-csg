@@ -1,0 +1,13 @@
+arch: amd64
+os: linux
+dist: focal
+
+language: python
+python:
+  - "3.9"
+jobs:
+  include:
+    - stage: prime number csg checking
+      script:
+        - python ./src/prime_checker.py 3
+        - cat ./data/check_log.txt
